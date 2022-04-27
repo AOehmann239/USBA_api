@@ -1,0 +1,32 @@
+{
+  "name": "usba_api",
+  "version": "1.0.0",
+  "description": "Bank app api",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AOehmann239/USBA_api.git"
+  },
+  "author": "Andrew",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AOehmann239/USBA_api/issues"
+  },
+  "homepage": "https://github.com/AOehmann239/USBA_api#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.18.0",
+    "jsonwebtoken": "^8.5.1",
+    "method-override": "^3.0.0",
+    "mongodb": "^4.5.0",
+    "mongoose": "^6.3.1",
+    "passport": "^0.5.2",
+    "passport-http-bearer": "^1.0.1"
+  }
+}
