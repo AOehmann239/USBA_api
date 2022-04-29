@@ -45,20 +45,20 @@ router.get('/expenses', (req, res, next) => {
 
 // INDEX
 // get expenses by category
-router.get('/expenses/category/:category', (req, res, next) => {
-  const category = req.params.category;
-  Expense.find({ category: category })
-    .then((expenses) => {
-      // `expenses` will be an array of Mongoose documents
-      // we want to convert each one to a POJO, so we use `.map` to
-      // apply `.toObject` to each one
-      return expenses.map((expense) => expense.toObject());
-    })
-    // respond with status 200 and JSON of the examples
-    .then((expenses) => res.status(200).json({ expenses: expenses }))
-    // if an error occurs, pass it to the handler
-    .catch(next);
-});
+// router.get('/expenses/category/:category', (req, res, next) => {
+//   const category = req.params.category;
+//   Expense.find({ category: category })
+//     .then((expenses) => {
+//       // `expenses` will be an array of Mongoose documents
+//       // we want to convert each one to a POJO, so we use `.map` to
+//       // apply `.toObject` to each one
+//       return expenses.map((expense) => expense.toObject());
+//     })
+//     // respond with status 200 and JSON of the examples
+//     .then((expenses) => res.status(200).json({ expenses: expenses }))
+//     // if an error occurs, pass it to the handler
+//     .catch(next);
+// });
 
 // SHOW
 // GET /expenses/5a7db6c74d55bc51bdf39793
