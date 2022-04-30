@@ -64,7 +64,7 @@ router.get('/expenses', (req, res, next) => {
 // GET /expenses/5a7db6c74d55bc51bdf39793
 router.get('/expenses/:id', (req, res, next) => {
   // req.params.id will be set based on the `:id` in the route
-  Expense.findById(req.params._id)
+  Expense.findById(req.params.id)
     .populate('owner')
     .then(handle404)
     // if `findById` is succesful, respond with 200 and "example" JSON
