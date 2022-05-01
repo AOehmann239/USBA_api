@@ -102,7 +102,7 @@ router.patch('/expenses/:id', requireToken, removeBlanks, (req, res, next) => {
     .then((expense) => {
       // pass the `req` object and the Mongoose record to `requireOwnership`
       // it will throw an error if the current user isn't the owner
-      requireOwnership(req, expense);
+      // requireOwnership(req, expense);
 
       // pass the result of Mongoose's `.update` to the next `.then`
       return expense.updateOne(req.body.expense);
@@ -120,7 +120,7 @@ router.delete('/expenses/:id', requireToken, (req, res, next) => {
     .then(handle404)
     .then((expense) => {
       // throw an error if current user doesn't own `expense`
-      requireOwnership(req, expense);
+      // requireOwnership(req, expense);
       // delete the expense ONLY IF the above didn't throw
       expense.deleteOne();
     })
